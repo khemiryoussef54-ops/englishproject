@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Rights Presentation</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial, Helvetica, sans-serif;background:#0a0a0a;color:white;overflow:hidden;}
+.slider{display:flex;width:100%;height:100vh;transition:transform 1s cubic-bezier(.77,0,.18,1);}
+.slide{
+  min-width:100%;
+  height:100vh;
+  padding:80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  position:relative;
+}
+.slide::before{
+  content:"";
+  position:absolute;
+  top:0;left:0;width:100%;height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:0;
+}
+.slide *{position:relative; z-index:1;}
+h1{color:gold;font-size:42px;margin-bottom:20px;}
+ul{font-size:20px;line-height:1.6;max-width:800px;}
+li{opacity:0;transform:translateY(20px);transition:all 0.6s ease;}
+li.show{opacity:1;transform:translateY(0);}
+.slide-img{
+  width:200px;
+  max-width:30%;
+  height:auto;
+  margin-top:20px;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+  align-self:flex-start;
+}
+.controls{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);}
+button{padding:12px 22px;margin:5px;font-size:16px;border:none;background:gold;font-weight:bold;cursor:pointer;}
+button:hover{background:#d4af37;}
+.dots{position:fixed;bottom:70px;width:100%;text-align:center;}
+.dot{height:10px;width:10px;margin:4px;display:inline-block;background:#666;border-radius:50%;}
+.dot.active{background:gold;}
+@media(max-width:700px){
+  h1{font-size:32px;}
+  ul{font-size:18px;}
+  .slide-img{width:150px;}
+}
+.diagram{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  max-width:600px;
+  margin-top:40px;
+}
+.diagram div{
+  background:rgba(255,215,0,0.15);
+  border:2px solid gold;
+  padding:20px;
+  text-align:center;
+  font-weight:bold;
+  border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<div class="slider" id="slider">
+
+<!-- Slide 1 -->
+<section class="slide" style="background-image:url('images/UDHR.jpg')">
+<h1>The Pillars of Dignity</h1>
+<ul>
+<li>Understanding Our Human Rights</li>
+<li>A Focus on Life, Justice, Freedom, and Belief</li>
+<li>Presented by: Youssef Khemir / Donyes Bouthriwa / Alaa Hamdoun / Shahd Nebi / Nour Hamemi</li>
+</ul>
+</section>
+
+<!-- Slide 2 -->
+<section class="slide" style="background-image:url('images/UN_building.jpg')">
+<h1>Introduction to Human Rights</h1>
+<ul>
+<li>Rights inherent to all human beings</li>
+<li>Apply regardless of race, religion, nationality</li>
+<li>Universal Declaration of Human Rights adopted in 1948</li>
+<li>All humans are born free and equal in dignity</li>
+</ul>
+<img src="images.justice.png" class="slide-img">
+</section>
+
+<!-- Slide 3 -->
+<section class="slide" style="background-image:url('images/security_shield.png')">
+<h1>Right to Life and Security</h1>
+<ul>
+<li>Article 3 of the UDHR</li>
+<li>Right to life, liberty, and security</li>
+<li>Foundation of all other rights</li>
+<li>Protection from violence and threats</li>
+</ul>
+<img src="Security shield symbol.png" class="slide-img">
+</section>
+
+<!-- Slide 4 -->
+<section class="slide" style="background-image:url('images/broken_chains.png')">
+<h1>Freedom from Slavery and Torture</h1>
+<ul>
+<li>No one shall be held in slavery</li>
+<li>No torture or cruel punishment</li>
+<li>Modern slavery includes trafficking and forced labor</li>
+<li>These rights are absolute</li>
+</ul>
+<img src="Broken chains (symbol of freedom).jpg" class="slide-img">
+</section>
+
+<!-- Slide 5 -->
+<section class="slide" style="background-image:url('images/scales_justice.png')">
+<h1>Right to Justice</h1>
+<ul>
+<li>Right to a fair and public trial</li>
+<li>Presumption of innocence</li>
+<li>Equality before the law</li>
+<li>Prevents abuse of power</li>
+</ul>
+<img src="Scales of justice icon.png" class="slide-img">
+</section>
+
+<!-- Slide 6 -->
+<section class="slide" style="background-image:url('images/accessibility.png')">
+<h1>Right of Accessibility</h1>
+<ul>
+<li>Ability to fully participate in society</li>
+<li>Accessible buildings and transport</li>
+<li>Access to education and information</li>
+<li>Inclusive society without barriers</li>
+</ul>
+<img src="wheelchair accessibility symbol.jpg" class="slide-img">
+</section>
+
+<!-- Slide 7 -->
+<section class="slide" style="background-image:url('images/religion_symbols.jpg')">
+<h1>Right of Religion</h1>
+<ul>
+<li>Freedom of thought and belief</li>
+<li>Right to follow any religion or none</li>
+<li>Right to practice publicly or privately</li>
+<li>Protects minority religions</li>
+</ul>
+<img src="Multiple religion symbols.jpg" class="slide-img">
+</section>
+
+<!-- Slide 8 -->
+<section class="slide" style="background-image:url('images/network.png')">
+<h1>Interdependence of Rights</h1>
+<div class="diagram">
+<div>Security</div>
+<div>Justice</div>
+<div>Accessibility</div>
+<div>Religion</div>
+<div>Human Rights</div>
+</section>
+
+<!-- Slide 9 -->
+<section class="slide" style="background-image:url('images/mandela.jpg')">
+<h1>Conclusion</h1>
+<ul>
+<li>Human rights protect dignity</li>
+<li>They are the foundation of justice and peace</li>
+<li>Everyone must respect the rights of others</li>
+<li>"To deny people their human rights is to challenge their very humanity." — Nelson Mandela</li>
+</ul>
+<img src="Photo of Nelson Mandela.jpg" class="slide-img">
+</section>
+
+<!-- Slide 10 -->
+<section class="slide" style="background-image:url('images/question_mark.png')">
+<h1>Questions?</h1>
+<ul>
+<li>Discussion</li>
+<li>Thank you for listening</li>
+</ul>
+<img src="Question mark icon.png" class="slide-img">
+</section>
+
+</div>
+
+<div class="controls">
+<button onclick="prev()">Previous</button>
+<button onclick="next()">Next</button>
+</div>
+
+<div class="dots" id="dots"></div>
+
+<script>
+let slider=document.getElementById("slider")
+let slides=document.querySelectorAll(".slide")
+let index=0
+
+function showBullets(){
+let bullets=slides[index].querySelectorAll("li")
+bullets.forEach((b,i)=>{setTimeout(()=>{b.classList.add("show")},i*500)})
+}
+
+function update(){
+slider.style.transform="translateX(-"+index*100+"%)"
+document.querySelectorAll("li").forEach(b=>b.classList.remove("show"))
+setTimeout(showBullets,200)
+updateDots()
+}
+
+function next(){if(index<slides.length-1){index++;update()}}
+function prev(){if(index>0){index--;update()}}
+document.addEventListener("keydown",e=>{if(e.key==="ArrowRight") next(); if(e.key==="ArrowLeft") prev()})
+
+let dotsContainer=document.getElementById("dots")
+slides.forEach((s,i)=>{let d=document.createElement("span"); d.className="dot"; d.onclick=()=>{index=i;update()}; dotsContainer.appendChild(d)})
+function updateDots(){document.querySelectorAll(".dot").forEach((d,i)=>{d.classList.toggle("active",i===index)})}
+
+let startX=0
+document.addEventListener("touchstart",e=>{startX=e.touches[0].clientX})
+document.addEventListener("touchend",e=>{let endX=e.changedTouches[0].clientX;if(startX-endX>50) next(); if(endX-startX>50) prev()})
+
+update()
+</script>
+
+</body>
+</html>
